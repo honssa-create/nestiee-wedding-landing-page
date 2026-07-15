@@ -1,0 +1,1400 @@
+<!--
+  Nestiee 燕窩回禮 Landing Page
+  WordPress / X Theme / Cornerstone 使用方式：
+  1. 在 Cornerstone 加入「Raw Content」或「HTML」元素
+  2. 將此檔案內容完整複製貼上（不含此註解亦可）
+  3. 搜尋 REPLACE_WHATSAPP 替換為你的 WhatsApp 號碼（例：85212345678）
+  4. 可選：替換圖片 URL 為實際產品攝影
+-->
+
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,300;0,400;0,500;0,600;1,400;1,500&family=Noto+Serif+TC:wght@300;400;500&display=swap" rel="stylesheet">
+
+<div id="nestiee-landing" class="nestiee-landing">
+
+<style>
+/* ── Scoped reset — prevents X Theme / Cornerstone bleed ── */
+#nestiee-landing,
+#nestiee-landing *,
+#nestiee-landing *::before,
+#nestiee-landing *::after {
+  box-sizing: border-box !important;
+  margin: 0;
+  padding: 0;
+}
+
+#nestiee-landing {
+  --nestiee-cream: #FAF7F2;
+  --nestiee-cream-deep: #F3EDE4;
+  --nestiee-oat: #6B5744;
+  --nestiee-oat-light: #8A7560;
+  --nestiee-oat-dark: #3D2B1F;
+  --nestiee-gold: #C9A96E;
+  --nestiee-white: #FFFFFF;
+  --nestiee-font-display: 'Cormorant Garamond', 'Noto Serif TC', Georgia, serif;
+  --nestiee-font-body: 'Noto Serif TC', 'Cormorant Garamond', Georgia, serif;
+  --nestiee-ease: cubic-bezier(0.25, 0.46, 0.45, 0.94);
+  --nestiee-section-pad: clamp(60px, 8vw, 100px);
+
+  font-family: var(--nestiee-font-body) !important;
+  font-size: 16px !important;
+  line-height: 1.8 !important;
+  color: var(--nestiee-oat) !important;
+  background: var(--nestiee-cream) !important;
+  width: 100% !important;
+  max-width: 100% !important;
+  overflow-x: hidden !important;
+  -webkit-font-smoothing: antialiased;
+  position: relative;
+  z-index: 1;
+}
+
+#nestiee-landing img {
+  max-width: 100% !important;
+  height: auto !important;
+  display: block !important;
+  border: none !important;
+}
+
+#nestiee-landing a {
+  color: inherit !important;
+  text-decoration: none !important;
+  background: none !important;
+  box-shadow: none !important;
+}
+
+#nestiee-landing button {
+  font-family: inherit !important;
+  cursor: pointer !important;
+  border: none !important;
+  background: none !important;
+  appearance: none !important;
+  -webkit-appearance: none !important;
+}
+
+#nestiee-landing h1,
+#nestiee-landing h2,
+#nestiee-landing h3,
+#nestiee-landing h4,
+#nestiee-landing p {
+  font-family: inherit !important;
+  font-weight: inherit !important;
+  letter-spacing: normal !important;
+  text-transform: none !important;
+  margin: 0 !important;
+  padding: 0 !important;
+}
+
+/* ── Typography ── */
+.nestiee-display {
+  font-family: var(--nestiee-font-display) !important;
+  font-weight: 400 !important;
+  line-height: 1.35 !important;
+  letter-spacing: 0.02em !important;
+}
+
+.nestiee-section-title {
+  font-family: var(--nestiee-font-display) !important;
+  font-size: clamp(1.75rem, 3.5vw, 2.5rem) !important;
+  font-weight: 400 !important;
+  line-height: 1.4 !important;
+  color: var(--nestiee-oat) !important;
+  text-align: center;
+  margin-bottom: 1.25rem !important;
+}
+
+.nestiee-section-intro {
+  font-size: clamp(0.9rem, 1.5vw, 1rem) !important;
+  font-weight: 300 !important;
+  line-height: 2 !important;
+  color: var(--nestiee-oat-light) !important;
+  text-align: center;
+  max-width: 560px;
+  margin: 0 auto 3.5rem !important;
+}
+
+.nestiee-label {
+  font-family: var(--nestiee-font-display) !important;
+  font-size: 0.65rem !important;
+  letter-spacing: 0.18em !important;
+  text-transform: uppercase;
+  color: var(--nestiee-gold) !important;
+}
+
+/* ── Layout helpers ── */
+.nestiee-section {
+  padding: var(--nestiee-section-pad) clamp(20px, 5vw, 60px) !important;
+  position: relative;
+}
+
+.nestiee-container {
+  max-width: 1200px;
+  margin: 0 auto !important;
+  width: 100%;
+}
+
+/* ── Buttons ── */
+.nestiee-btn-row {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  gap: 1.5rem 2.5rem;
+}
+
+.nestiee-btn-ghost {
+  display: inline-block !important;
+  padding: 0.85rem 2rem !important;
+  border: 1px solid var(--nestiee-oat) !important;
+  background: transparent !important;
+  color: var(--nestiee-oat) !important;
+  font-family: var(--nestiee-font-body) !important;
+  font-size: 0.85rem !important;
+  font-weight: 400 !important;
+  letter-spacing: 0.08em !important;
+  transition: background 0.3s var(--nestiee-ease), color 0.3s var(--nestiee-ease) !important;
+  text-decoration: none !important;
+  cursor: pointer !important;
+}
+
+.nestiee-btn-ghost:hover {
+  background: var(--nestiee-oat) !important;
+  color: var(--nestiee-cream) !important;
+}
+
+.nestiee-btn-text {
+  display: inline-block !important;
+  font-size: 0.85rem !important;
+  letter-spacing: 0.06em !important;
+  color: var(--nestiee-oat) !important;
+  position: relative;
+  padding-bottom: 4px !important;
+  transition: color 0.3s ease !important;
+}
+
+.nestiee-btn-text::after {
+  content: '';
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  width: 100%;
+  height: 1px;
+  background: var(--nestiee-gold);
+  transform: scaleX(1);
+  transform-origin: left;
+  transition: transform 0.3s var(--nestiee-ease);
+}
+
+.nestiee-btn-text:hover::after {
+  transform: scaleX(0.6);
+  transform-origin: right;
+}
+
+.nestiee-btn-filled {
+  display: inline-block !important;
+  padding: 0.9rem 2.25rem !important;
+  background: var(--nestiee-oat-dark) !important;
+  color: var(--nestiee-cream) !important;
+  font-family: var(--nestiee-font-body) !important;
+  font-size: 0.85rem !important;
+  letter-spacing: 0.08em !important;
+  border: 1px solid var(--nestiee-oat-dark) !important;
+  transition: background 0.3s var(--nestiee-ease), color 0.3s var(--nestiee-ease) !important;
+  text-decoration: none !important;
+  cursor: pointer !important;
+}
+
+.nestiee-btn-filled:hover {
+  background: transparent !important;
+  color: var(--nestiee-oat-dark) !important;
+}
+
+/* ── Scroll animations ── */
+.nestiee-reveal {
+  opacity: 0;
+  transform: translateY(20px);
+  transition: opacity 0.6s var(--nestiee-ease), transform 0.6s var(--nestiee-ease);
+}
+
+.nestiee-reveal.nestiee-visible {
+  opacity: 1;
+  transform: translateY(0);
+}
+
+.nestiee-reveal[data-delay="1"] { transition-delay: 0.1s; }
+.nestiee-reveal[data-delay="2"] { transition-delay: 0.2s; }
+.nestiee-reveal[data-delay="3"] { transition-delay: 0.3s; }
+.nestiee-reveal[data-delay="4"] { transition-delay: 0.4s; }
+.nestiee-reveal[data-delay="5"] { transition-delay: 0.5s; }
+
+/* ══════════════════════════════════════
+   SECTION 01 — HERO
+   ══════════════════════════════════════ */
+.nestiee-hero {
+  min-height: 100vh;
+  display: flex;
+  align-items: stretch;
+  background: var(--nestiee-cream) !important;
+  padding: 0 !important;
+}
+
+.nestiee-hero-inner {
+  display: flex;
+  width: 100%;
+  min-height: 100vh;
+}
+
+.nestiee-hero-copy {
+  flex: 0 0 55%;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  padding: clamp(40px, 6vw, 80px) clamp(24px, 5vw, 80px) !important;
+}
+
+.nestiee-hero-title {
+  font-family: var(--nestiee-font-display) !important;
+  font-size: clamp(2.2rem, 4.5vw, 3.5rem) !important;
+  font-weight: 400 !important;
+  line-height: 1.35 !important;
+  color: var(--nestiee-oat) !important;
+  margin-bottom: 1.75rem !important;
+}
+
+.nestiee-hero-subtitle {
+  font-size: clamp(0.9rem, 1.4vw, 1.05rem) !important;
+  font-weight: 300 !important;
+  line-height: 2 !important;
+  color: var(--nestiee-oat-light) !important;
+  margin-bottom: 2.75rem !important;
+  max-width: 420px;
+}
+
+.nestiee-hero-visual {
+  flex: 0 0 45%;
+  position: relative;
+  overflow: hidden;
+  min-height: 50vh;
+}
+
+.nestiee-hero-visual img {
+  width: 100% !important;
+  height: 100% !important;
+  object-fit: cover !important;
+  object-position: center 30% !important;
+}
+
+@media (max-width: 900px) {
+  .nestiee-hero-inner {
+    flex-direction: column-reverse;
+    min-height: auto;
+  }
+  .nestiee-hero-copy,
+  .nestiee-hero-visual {
+    flex: none;
+    width: 100%;
+  }
+  .nestiee-hero-visual {
+    min-height: 55vw;
+    max-height: 70vw;
+  }
+  .nestiee-hero {
+    min-height: auto;
+  }
+}
+
+/* ══════════════════════════════════════
+   SECTION 02 — THE PROMISE
+   ══════════════════════════════════════ */
+.nestiee-promise {
+  background: var(--nestiee-cream-deep) !important;
+}
+
+.nestiee-promise-quote {
+  font-size: clamp(0.95rem, 1.5vw, 1.05rem) !important;
+  font-weight: 300 !important;
+  line-height: 2.2 !important;
+  text-align: center;
+  color: var(--nestiee-oat) !important;
+  margin-bottom: 4rem !important;
+}
+
+.nestiee-promise-grid {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 0;
+  max-width: 1000px;
+  margin: 0 auto !important;
+}
+
+.nestiee-promise-item {
+  padding: 2rem clamp(16px, 3vw, 40px) !important;
+  text-align: center;
+  border-right: 1px solid var(--nestiee-gold);
+}
+
+.nestiee-promise-item:last-child {
+  border-right: none;
+}
+
+.nestiee-promise-icon {
+  width: 56px;
+  height: 56px;
+  margin: 0 auto 1.75rem !important;
+  color: var(--nestiee-gold);
+}
+
+.nestiee-promise-icon svg {
+  width: 100% !important;
+  height: 100% !important;
+}
+
+.nestiee-promise-item h3 {
+  font-family: var(--nestiee-font-display) !important;
+  font-size: 1.15rem !important;
+  font-weight: 500 !important;
+  color: var(--nestiee-oat) !important;
+  margin-bottom: 1rem !important;
+  letter-spacing: 0.04em !important;
+}
+
+.nestiee-promise-item p {
+  font-size: 0.88rem !important;
+  font-weight: 300 !important;
+  line-height: 2 !important;
+  color: var(--nestiee-oat-light) !important;
+}
+
+@media (max-width: 768px) {
+  .nestiee-promise-grid {
+    grid-template-columns: 1fr;
+  }
+  .nestiee-promise-item {
+    border-right: none;
+    border-bottom: 1px solid var(--nestiee-gold);
+    padding: 2.5rem 1rem !important;
+  }
+  .nestiee-promise-item:last-child {
+    border-bottom: none;
+  }
+}
+
+/* ══════════════════════════════════════
+   SECTION 03 — FLAVOURS
+   ══════════════════════════════════════ */
+.nestiee-flavours-track-wrap {
+  overflow: hidden;
+  margin: 0 -20px;
+  padding: 0 20px;
+}
+
+.nestiee-flavours-track {
+  display: flex;
+  gap: clamp(16px, 2.5vw, 28px);
+  overflow-x: auto;
+  scroll-snap-type: x mandatory;
+  -webkit-overflow-scrolling: touch;
+  scrollbar-width: none;
+  padding-bottom: 8px;
+}
+
+.nestiee-flavours-track::-webkit-scrollbar {
+  display: none;
+}
+
+.nestiee-flavour-card {
+  flex: 0 0 calc(33.333% - 19px);
+  min-width: 280px;
+  scroll-snap-align: start;
+  background: var(--nestiee-white) !important;
+  border-radius: 2px !important;
+  overflow: hidden;
+  transition: transform 0.3s var(--nestiee-ease), box-shadow 0.3s var(--nestiee-ease);
+}
+
+.nestiee-flavour-card:hover {
+  transform: translateY(-4px);
+}
+
+.nestiee-flavour-img-wrap {
+  position: relative;
+  overflow: hidden;
+  aspect-ratio: 4 / 3;
+}
+
+.nestiee-flavour-img-wrap img {
+  width: 100% !important;
+  height: 100% !important;
+  object-fit: cover !important;
+  transition: transform 0.3s var(--nestiee-ease);
+}
+
+.nestiee-flavour-card:hover .nestiee-flavour-img-wrap img {
+  transform: scale(1.03);
+}
+
+.nestiee-flavour-tag {
+  position: absolute;
+  top: 16px;
+  right: 16px;
+  padding: 0.35rem 0.75rem !important;
+  border: 1px solid var(--nestiee-gold);
+  background: rgba(250, 247, 242, 0.92) !important;
+  font-family: var(--nestiee-font-display) !important;
+  font-size: 0.6rem !important;
+  letter-spacing: 0.14em !important;
+  color: var(--nestiee-gold) !important;
+}
+
+.nestiee-flavour-body {
+  padding: 1.75rem 1.5rem 2rem !important;
+}
+
+.nestiee-flavour-body h3 {
+  font-family: var(--nestiee-font-display) !important;
+  font-size: 1.35rem !important;
+  font-weight: 500 !important;
+  color: var(--nestiee-oat) !important;
+  margin-bottom: 0.35rem !important;
+}
+
+.nestiee-flavour-body .nestiee-flavour-sub {
+  font-family: var(--nestiee-font-display) !important;
+  font-size: 0.7rem !important;
+  font-style: italic;
+  color: var(--nestiee-gold) !important;
+  margin-bottom: 1rem !important;
+  display: block;
+}
+
+.nestiee-flavour-body p {
+  font-size: 0.88rem !important;
+  font-weight: 300 !important;
+  line-height: 2 !important;
+  color: var(--nestiee-oat-light) !important;
+}
+
+@media (max-width: 960px) {
+  .nestiee-flavour-card {
+    flex: 0 0 78%;
+    min-width: 260px;
+  }
+}
+
+/* ══════════════════════════════════════
+   SECTION 04 — COLLECTION
+   ══════════════════════════════════════ */
+.nestiee-collection {
+  background: var(--nestiee-white) !important;
+}
+
+.nestiee-collection-grid {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: clamp(16px, 2vw, 32px);
+  max-width: 960px;
+  margin: 0 auto 2.5rem !important;
+  align-items: end;
+}
+
+.nestiee-collection-item {
+  text-align: center;
+  padding: 2rem 1rem 1.5rem !important;
+  border: 1px solid transparent;
+  border-radius: 2px !important;
+  cursor: pointer !important;
+  transition: border-color 0.3s ease, transform 0.3s var(--nestiee-ease);
+}
+
+.nestiee-collection-item:hover {
+  border-color: rgba(201, 169, 110, 0.4);
+}
+
+.nestiee-collection-item.nestiee-active {
+  border-color: var(--nestiee-gold);
+  transform: scale(1.04);
+}
+
+.nestiee-collection-img {
+  height: clamp(140px, 18vw, 200px);
+  display: flex;
+  align-items: flex-end;
+  justify-content: center;
+  margin-bottom: 1.5rem !important;
+}
+
+.nestiee-collection-img img {
+  max-height: 100% !important;
+  width: auto !important;
+  object-fit: contain !important;
+  filter: drop-shadow(0 12px 24px rgba(61, 43, 31, 0.1));
+}
+
+.nestiee-collection-item[data-size="25"] .nestiee-collection-img img { height: 55%; }
+.nestiee-collection-item[data-size="45"] .nestiee-collection-img img { height: 75%; }
+.nestiee-collection-item[data-size="75"] .nestiee-collection-img img { height: 100%; }
+
+.nestiee-collection-item h3 {
+  font-family: var(--nestiee-font-display) !important;
+  font-size: 1.1rem !important;
+  font-weight: 500 !important;
+  color: var(--nestiee-oat) !important;
+  margin-bottom: 0.25rem !important;
+}
+
+.nestiee-collection-item .nestiee-size-sub {
+  font-size: 0.72rem !important;
+  color: var(--nestiee-gold) !important;
+  letter-spacing: 0.1em !important;
+}
+
+.nestiee-collection-item .nestiee-most-chosen {
+  font-family: var(--nestiee-font-display) !important;
+  font-size: 0.55rem !important;
+  letter-spacing: 0.16em !important;
+  text-transform: uppercase;
+  color: var(--nestiee-oat-light) !important;
+  display: block;
+  margin-top: 0.35rem !important;
+}
+
+.nestiee-collection-detail {
+  max-width: 560px;
+  margin: 0 auto 2.5rem !important;
+  text-align: center;
+  min-height: 80px;
+}
+
+.nestiee-collection-detail p {
+  font-size: 0.92rem !important;
+  font-weight: 300 !important;
+  line-height: 2 !important;
+  color: var(--nestiee-oat-light) !important;
+  opacity: 1;
+  transition: opacity 0.25s ease-out;
+}
+
+.nestiee-collection-detail p.nestiee-fading {
+  opacity: 0;
+}
+
+.nestiee-collection-cta {
+  text-align: center;
+  margin-bottom: 2rem !important;
+}
+
+.nestiee-collection-note {
+  text-align: center;
+  font-size: 0.72rem !important;
+  font-weight: 300 !important;
+  color: var(--nestiee-oat-light) !important;
+  line-height: 2 !important;
+  opacity: 0.75;
+}
+
+@media (max-width: 700px) {
+  .nestiee-collection-grid {
+    grid-template-columns: 1fr;
+    max-width: 320px;
+  }
+  .nestiee-collection-item.nestiee-active {
+    transform: none;
+  }
+}
+
+/* ══════════════════════════════════════
+   SECTION 05 — TESTIMONIALS
+   ══════════════════════════════════════ */
+.nestiee-testimonials-wrap {
+  overflow: hidden;
+  position: relative;
+}
+
+.nestiee-testimonials-track {
+  display: flex;
+  gap: 24px;
+  transition: transform 0.6s var(--nestiee-ease);
+  will-change: transform;
+}
+
+.nestiee-testimonial-card {
+  flex: 0 0 calc(66.666% - 12px);
+  min-width: 280px;
+  background: var(--nestiee-white) !important;
+  border-radius: 2px !important;
+  overflow: hidden;
+}
+
+.nestiee-testimonial-photo {
+  aspect-ratio: 16 / 10;
+  overflow: hidden;
+}
+
+.nestiee-testimonial-photo img {
+  width: 100% !important;
+  height: 100% !important;
+  object-fit: cover !important;
+  filter: saturate(0.35) contrast(0.95);
+}
+
+.nestiee-testimonial-body {
+  padding: 2rem 2rem 2.25rem !important;
+}
+
+.nestiee-testimonial-quote {
+  font-family: var(--nestiee-font-display) !important;
+  font-size: clamp(1.05rem, 2vw, 1.25rem) !important;
+  font-style: italic;
+  font-weight: 400 !important;
+  line-height: 1.75 !important;
+  color: var(--nestiee-oat) !important;
+  margin-bottom: 1.25rem !important;
+}
+
+.nestiee-testimonial-author {
+  font-size: 0.75rem !important;
+  letter-spacing: 0.1em !important;
+  color: var(--nestiee-oat-light) !important;
+}
+
+.nestiee-testimonials-dots {
+  display: flex;
+  justify-content: center;
+  gap: 10px;
+  margin-top: 2rem !important;
+}
+
+.nestiee-testimonials-dots button {
+  width: 24px;
+  height: 2px;
+  background: rgba(107, 87, 68, 0.2) !important;
+  border: none !important;
+  padding: 0 !important;
+  transition: background 0.3s ease, width 0.3s ease;
+}
+
+.nestiee-testimonials-dots button.nestiee-dot-active {
+  background: var(--nestiee-gold) !important;
+  width: 40px;
+}
+
+@media (max-width: 700px) {
+  .nestiee-testimonial-card {
+    flex: 0 0 85%;
+  }
+}
+
+/* ══════════════════════════════════════
+   SECTION 06 — INGREDIENTS FIRST
+   ══════════════════════════════════════ */
+.nestiee-ingredients {
+  background: var(--nestiee-oat-dark) !important;
+  color: var(--nestiee-cream) !important;
+}
+
+.nestiee-ingredients .nestiee-section-title {
+  color: var(--nestiee-cream) !important;
+}
+
+.nestiee-ingredients .nestiee-section-intro {
+  color: rgba(250, 247, 242, 0.75) !important;
+}
+
+.nestiee-ingredients-grid {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 0;
+  max-width: 800px;
+  margin: 0 auto !important;
+  border-top: 1px solid rgba(201, 169, 110, 0.35);
+  border-left: 1px solid rgba(201, 169, 110, 0.35);
+}
+
+.nestiee-ingredients-item {
+  padding: clamp(28px, 4vw, 44px) clamp(20px, 3vw, 36px) !important;
+  border-right: 1px solid rgba(201, 169, 110, 0.35);
+  border-bottom: 1px solid rgba(201, 169, 110, 0.35);
+}
+
+.nestiee-ingredients-item h3 {
+  font-family: var(--nestiee-font-display) !important;
+  font-size: 1.1rem !important;
+  font-weight: 500 !important;
+  color: var(--nestiee-gold) !important;
+  margin-bottom: 0.85rem !important;
+  letter-spacing: 0.06em !important;
+}
+
+.nestiee-ingredients-item p {
+  font-size: 0.86rem !important;
+  font-weight: 300 !important;
+  line-height: 2 !important;
+  color: rgba(250, 247, 242, 0.8) !important;
+}
+
+@media (max-width: 600px) {
+  .nestiee-ingredients-grid {
+    grid-template-columns: 1fr;
+  }
+}
+
+/* ══════════════════════════════════════
+   SECTION 07 — TASTING BOX
+   ══════════════════════════════════════ */
+.nestiee-tasting {
+  background: var(--nestiee-cream) !important;
+}
+
+.nestiee-tasting-inner {
+  display: flex;
+  align-items: center;
+  gap: clamp(32px, 5vw, 72px);
+  max-width: 1100px;
+  margin: 0 auto !important;
+}
+
+.nestiee-tasting-visual {
+  flex: 0 0 48%;
+}
+
+.nestiee-tasting-visual img {
+  width: 100% !important;
+  border-radius: 2px !important;
+  aspect-ratio: 4 / 3;
+  object-fit: cover !important;
+}
+
+.nestiee-tasting-copy {
+  flex: 1;
+}
+
+.nestiee-tasting-copy .nestiee-section-title {
+  text-align: left;
+  margin-bottom: 1.5rem !important;
+}
+
+.nestiee-tasting-copy p {
+  font-size: 0.92rem !important;
+  font-weight: 300 !important;
+  line-height: 2.1 !important;
+  color: var(--nestiee-oat-light) !important;
+  margin-bottom: 1.25rem !important;
+}
+
+.nestiee-tasting-box-name {
+  font-family: var(--nestiee-font-display) !important;
+  font-size: 1.05rem !important;
+  color: var(--nestiee-oat) !important;
+  margin: 1.75rem 0 2rem !important;
+  padding-top: 1.5rem !important;
+  border-top: 1px solid var(--nestiee-gold);
+}
+
+@media (max-width: 800px) {
+  .nestiee-tasting-inner {
+    flex-direction: column;
+  }
+  .nestiee-tasting-visual {
+    flex: none;
+    width: 100%;
+  }
+  .nestiee-tasting-copy .nestiee-section-title {
+    text-align: center;
+  }
+  .nestiee-tasting-copy {
+    text-align: center;
+  }
+  .nestiee-tasting-copy .nestiee-btn-row {
+    justify-content: center;
+  }
+}
+
+/* ══════════════════════════════════════
+   SECTION 08 — FAQ
+   ══════════════════════════════════════ */
+.nestiee-faq {
+  background: var(--nestiee-cream-deep) !important;
+}
+
+.nestiee-faq-list {
+  max-width: 720px;
+  margin: 0 auto !important;
+}
+
+.nestiee-faq-item {
+  border-bottom: 1px solid rgba(201, 169, 110, 0.45);
+}
+
+.nestiee-faq-item:first-child {
+  border-top: 1px solid rgba(201, 169, 110, 0.45);
+}
+
+.nestiee-faq-question {
+  width: 100% !important;
+  display: flex !important;
+  justify-content: space-between;
+  align-items: center;
+  gap: 1rem;
+  padding: 1.35rem 0 !important;
+  text-align: left;
+  font-family: var(--nestiee-font-body) !important;
+  font-size: 0.95rem !important;
+  font-weight: 400 !important;
+  color: var(--nestiee-oat) !important;
+  background: transparent !important;
+  border: none !important;
+  cursor: pointer !important;
+}
+
+.nestiee-faq-toggle {
+  font-family: var(--nestiee-font-display) !important;
+  font-size: 1.25rem !important;
+  font-weight: 300 !important;
+  color: var(--nestiee-gold) !important;
+  flex-shrink: 0;
+  width: 20px;
+  text-align: center;
+  line-height: 1 !important;
+  transition: transform 0.25s ease-out;
+}
+
+.nestiee-faq-item.nestiee-open .nestiee-faq-toggle {
+  transform: rotate(0deg);
+}
+
+.nestiee-faq-answer {
+  max-height: 0;
+  overflow: hidden;
+  transition: max-height 0.25s ease-out, padding 0.25s ease-out;
+}
+
+.nestiee-faq-item.nestiee-open .nestiee-faq-answer {
+  max-height: 300px;
+  padding-bottom: 1.35rem !important;
+}
+
+.nestiee-faq-answer p {
+  font-size: 0.88rem !important;
+  font-weight: 300 !important;
+  line-height: 2 !important;
+  color: var(--nestiee-oat-light) !important;
+}
+
+/* ══════════════════════════════════════
+   SECTION 09 — CTA FOOTER
+   ══════════════════════════════════════ */
+.nestiee-cta-footer {
+  background: var(--nestiee-cream) !important;
+  text-align: center;
+  padding: clamp(80px, 10vw, 120px) clamp(20px, 5vw, 60px) !important;
+}
+
+.nestiee-cta-footer .nestiee-hero-title {
+  font-size: clamp(1.85rem, 3.5vw, 2.75rem) !important;
+  margin-bottom: 1.25rem !important;
+}
+
+.nestiee-cta-footer .nestiee-hero-subtitle {
+  margin: 0 auto 2.75rem !important;
+  text-align: center;
+}
+
+.nestiee-cta-footer .nestiee-btn-row {
+  justify-content: center;
+}
+</style>
+
+<!-- ═══ SECTION 01 — HERO ═══ -->
+<section class="nestiee-hero" id="nestiee-hero">
+  <div class="nestiee-hero-inner">
+    <div class="nestiee-hero-copy">
+      <h1 class="nestiee-hero-title nestiee-reveal" data-delay="0">
+        以純粹的心意，<br>致謝最珍重的人。
+      </h1>
+      <p class="nestiee-hero-subtitle nestiee-reveal" data-delay="2">
+        Nestiee 無添加燕窩回禮。<br>
+        讓每一份謝意，都配得上你這一天的用心。
+      </p>
+      <div class="nestiee-btn-row nestiee-reveal" data-delay="4">
+        <a href="#nestiee-collection" class="nestiee-btn-ghost">了解回禮方案</a>
+        <a href="#nestiee-flavours" class="nestiee-btn-text">探索口味與份量</a>
+      </div>
+    </div>
+    <div class="nestiee-hero-visual nestiee-reveal" data-delay="3">
+      <img
+        src="https://images.unsplash.com/photo-1465492759489-5c9b5d0b5b62?w=1200&q=80"
+        alt="優雅雙手為燕窩回禮繫上絲帶"
+        loading="eager"
+        width="1200"
+        height="1600"
+      >
+    </div>
+  </div>
+</section>
+
+<!-- ═══ SECTION 02 — THE PROMISE ═══ -->
+<section class="nestiee-section nestiee-promise" id="nestiee-promise">
+  <div class="nestiee-container">
+    <h2 class="nestiee-section-title nestiee-reveal">
+      不止是燕窩。<br>是一份無需掛心的回禮方案。
+    </h2>
+    <p class="nestiee-promise-quote nestiee-reveal" data-delay="1">
+      你已經為這一天籌備了太多。<br>回禮這件事，交給我們。
+    </p>
+    <div class="nestiee-promise-grid">
+      <div class="nestiee-promise-item nestiee-reveal" data-delay="1">
+        <div class="nestiee-promise-icon" aria-hidden="true">
+          <svg viewBox="0 0 56 56" fill="none" xmlns="http://www.w3.org/2000/svg">
+            <ellipse cx="28" cy="30" rx="20" ry="10" stroke="currentColor" stroke-width="0.75"/>
+            <path d="M12 28 C16 18, 40 18, 44 28" stroke="currentColor" stroke-width="0.75" fill="none"/>
+            <path d="M18 26 C22 20, 34 20, 38 26" stroke="currentColor" stroke-width="0.5" fill="none" opacity="0.6"/>
+            <path d="M22 24 C25 21, 31 21, 34 24" stroke="currentColor" stroke-width="0.5" fill="none" opacity="0.4"/>
+          </svg>
+        </div>
+        <h3>專屬設計</h3>
+        <p>只需提供你們的名字與婚期，我們為你製作專屬 Logo Card。每一份回禮，都成為你們故事的一部分。</p>
+      </div>
+      <div class="nestiee-promise-item nestiee-reveal" data-delay="2">
+        <div class="nestiee-promise-icon" aria-hidden="true">
+          <svg viewBox="0 0 56 56" fill="none" xmlns="http://www.w3.org/2000/svg">
+            <path d="M14 38 C14 38, 18 22, 28 20 C38 18, 42 34, 42 34" stroke="currentColor" stroke-width="0.75" fill="none"/>
+            <path d="M22 36 L22 30 C22 28, 24 26, 28 26 C32 26, 34 28, 34 30 L34 36" stroke="currentColor" stroke-width="0.75" fill="none"/>
+            <line x1="18" y1="38" x2="38" y2="38" stroke="currentColor" stroke-width="0.75"/>
+            <circle cx="28" cy="16" r="3" stroke="currentColor" stroke-width="0.5" fill="none" opacity="0.5"/>
+          </svg>
+        </div>
+        <h3>靈活預訂</h3>
+        <p>先鎖定檔期，婚禮前四星期才確認最終數量。讓你在籌備過程中，保有最大的從容。</p>
+      </div>
+      <div class="nestiee-promise-item nestiee-reveal" data-delay="3">
+        <div class="nestiee-promise-icon" aria-hidden="true">
+          <svg viewBox="0 0 56 56" fill="none" xmlns="http://www.w3.org/2000/svg">
+            <rect x="16" y="14" width="24" height="28" rx="1" stroke="currentColor" stroke-width="0.75" fill="none"/>
+            <circle cx="28" cy="28" r="8" stroke="currentColor" stroke-width="0.75" fill="none"/>
+            <path d="M28 24 L28 28 L31 31" stroke="currentColor" stroke-width="0.5"/>
+            <path d="M12 22 L16 18 M44 22 L40 18" stroke="currentColor" stroke-width="0.5" opacity="0.5"/>
+          </svg>
+        </div>
+        <h3>直送場地</h3>
+        <p>婚禮前夕在香港持牌工場新鮮燉製，由專人直送婚宴場地。賓客當晚即可品嚐，無需雪櫃保存。</p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ═══ SECTION 03 — FLAVOURS ═══ -->
+<section class="nestiee-section" id="nestiee-flavours">
+  <div class="nestiee-container">
+    <h2 class="nestiee-section-title nestiee-reveal">
+      三款口味，<br>為不同的她，送上最適合的心意。
+    </h2>
+    <p class="nestiee-section-intro nestiee-reveal" data-delay="1">
+      我們堅持零添加，只為保留燕窩最純粹的本質。<br>每一款配搭，都經過細心挑選。
+    </p>
+    <div class="nestiee-flavours-track-wrap">
+      <div class="nestiee-flavours-track" role="list">
+        <article class="nestiee-flavour-card nestiee-reveal" data-delay="1" role="listitem">
+          <div class="nestiee-flavour-img-wrap">
+            <img src="https://images.unsplash.com/photo-1564890369478-c89ca6d9cde4?w=800&q=80" alt="黃金桂花燕窩" loading="lazy" width="800" height="600">
+            <span class="nestiee-flavour-tag">年輕賓客之選</span>
+          </div>
+          <div class="nestiee-flavour-body">
+            <h3>黃金桂花</h3>
+            <span class="nestiee-flavour-sub">年輕賓客之選</span>
+            <p>淡雅的桂花香，在唇齒間徐徐綻放。微甜回甘，是閨蜜與姊妹們最鍾愛的一款。</p>
+          </div>
+        </article>
+        <article class="nestiee-flavour-card nestiee-reveal" data-delay="2" role="listitem">
+          <div class="nestiee-flavour-img-wrap">
+            <img src="https://images.unsplash.com/photo-1606313564200-e75d5e30476c?w=800&q=80" alt="暖心紅棗燕窩" loading="lazy" width="800" height="600">
+            <span class="nestiee-flavour-tag">長輩至愛</span>
+          </div>
+          <div class="nestiee-flavour-body">
+            <h3>暖心紅棗</h3>
+            <span class="nestiee-flavour-sub">長輩至愛</span>
+            <p>棗香溫潤，精選紅棗切片入饌。承載著甜蜜蜜的傳統心意，向長輩表達最深的敬意。</p>
+          </div>
+        </article>
+        <article class="nestiee-flavour-card nestiee-reveal" data-delay="3" role="listitem">
+          <div class="nestiee-flavour-img-wrap">
+            <img src="https://images.unsplash.com/photo-1558618666-fcd25c85f82?w=800&q=80" alt="經典冰糖燕窩" loading="lazy" width="800" height="600">
+            <span class="nestiee-flavour-tag">家人最愛</span>
+          </div>
+          <div class="nestiee-flavour-body">
+            <h3>經典冰糖</h3>
+            <span class="nestiee-flavour-sub">家人最愛</span>
+            <p>清甜不膩，絲滑入喉。最能品嚐出頂級金絲燕窩的晶瑩質感，男女老幼皆宜。</p>
+          </div>
+        </article>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ═══ SECTION 04 — COLLECTION ═══ -->
+<section class="nestiee-section nestiee-collection" id="nestiee-collection">
+  <div class="nestiee-container">
+    <h2 class="nestiee-section-title nestiee-reveal">
+      為你的婚宴，<br>挑選最合適的份量。
+    </h2>
+    <p class="nestiee-section-intro nestiee-reveal" data-delay="1">
+      無論是私密的小型婚禮，還是盛大的百人晚宴，<br>每一份心意，都有最恰當的尺度。
+    </p>
+    <div class="nestiee-collection-grid" role="tablist" aria-label="份量選擇">
+      <button class="nestiee-collection-item" data-size="25" role="tab" aria-selected="false" tabindex="-1">
+        <div class="nestiee-collection-img">
+          <img src="https://images.unsplash.com/photo-1474979266404-7eaacbcd87c5?w=400&q=80" alt="The Petite 25g" loading="lazy" width="200" height="400">
+        </div>
+        <h3>The Petite | 25g</h3>
+        <span class="nestiee-size-sub">輕盈之選</span>
+      </button>
+      <button class="nestiee-collection-item nestiee-active" data-size="45" role="tab" aria-selected="true" tabindex="0">
+        <div class="nestiee-collection-img">
+          <img src="https://images.unsplash.com/photo-1474979266404-7eaacbcd87c5?w=400&q=80" alt="The Classic 45g" loading="lazy" width="200" height="400">
+        </div>
+        <h3>The Classic | 45g</h3>
+        <span class="nestiee-size-sub">經典之選</span>
+        <span class="nestiee-most-chosen">Most Chosen</span>
+      </button>
+      <button class="nestiee-collection-item" data-size="75" role="tab" aria-selected="false" tabindex="-1">
+        <div class="nestiee-collection-img">
+          <img src="https://images.unsplash.com/photo-1474979266404-7eaacbcd87c5?w=400&q=80" alt="The Prestige 75g" loading="lazy" width="200" height="400">
+        </div>
+        <h3>The Prestige | 75g</h3>
+        <span class="nestiee-size-sub">尊選之選</span>
+      </button>
+    </div>
+    <div class="nestiee-collection-detail" aria-live="polite">
+      <p id="nestiee-collection-desc">標準婚宴份量，蘊含約 70% 燕窩精華。恰如其分，展現主人家大方得體的待客之道。</p>
+    </div>
+    <div class="nestiee-collection-cta nestiee-reveal">
+      <a href="https://wa.me/REPLACE_WHATSAPP" class="nestiee-btn-ghost" target="_blank" rel="noopener noreferrer">了解方案詳情</a>
+    </div>
+    <p class="nestiee-collection-note nestiee-reveal" data-delay="1">
+      回禮訂製服務由 50 份起。<br>回禮數量與方案，歡迎與我們細談。
+    </p>
+  </div>
+</section>
+
+<!-- ═══ SECTION 05 — TESTIMONIALS ═══ -->
+<section class="nestiee-section" id="nestiee-moments">
+  <div class="nestiee-container">
+    <h2 class="nestiee-section-title nestiee-reveal">
+      每一場婚禮，<br>都是獨一無二的故事。
+    </h2>
+    <div class="nestiee-testimonials-wrap nestiee-reveal" data-delay="1">
+      <div class="nestiee-testimonials-track" id="nestiee-testimonials-track">
+        <article class="nestiee-testimonial-card">
+          <div class="nestiee-testimonial-photo">
+            <img src="https://images.unsplash.com/photo-1519741497674-611481863552?w=900&q=80" alt="婚宴賓客品嚐燕窩回禮" loading="lazy" width="900" height="560">
+          </div>
+          <div class="nestiee-testimonial-body">
+            <p class="nestiee-testimonial-quote">「那是一份令人驚喜的細膩。賓客在餐桌上發現這份可以即席品嚐的燕窩，那種被珍視的感覺，正是我們想傳遞的。」</p>
+            <p class="nestiee-testimonial-author">— K. &amp; J., The Peninsula Hong Kong</p>
+          </div>
+        </article>
+        <article class="nestiee-testimonial-card">
+          <div class="nestiee-testimonial-photo">
+            <img src="https://images.unsplash.com/photo-1464366400600-7168b8af9bc3?w=900&q=80" alt="婚禮現場燕窩回禮" loading="lazy" width="900" height="560">
+          </div>
+          <div class="nestiee-testimonial-body">
+            <p class="nestiee-testimonial-quote">「從包裝設計的溝通，到最後送到婚禮現場，Nestiee 讓我能完全放下心頭大石，專注享受屬於我的日子。」</p>
+            <p class="nestiee-testimonial-author">— C. &amp; T., Repulse Bay</p>
+          </div>
+        </article>
+      </div>
+      <div class="nestiee-testimonials-dots" id="nestiee-testimonials-dots" aria-hidden="true">
+        <button class="nestiee-dot-active" data-index="0" aria-label="Slide 1"></button>
+        <button data-index="1" aria-label="Slide 2"></button>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ═══ SECTION 06 — INGREDIENTS FIRST ═══ -->
+<section class="nestiee-section nestiee-ingredients" id="nestiee-ingredients">
+  <div class="nestiee-container">
+    <h2 class="nestiee-section-title nestiee-reveal">
+      成分表上，<br>只有燕窩本身。
+    </h2>
+    <p class="nestiee-section-intro nestiee-reveal" data-delay="1">
+      我們相信，你的心意值得最真實的成分去承載。<br>這不是一個行銷承諾，是我們三十年家族的標準。
+    </p>
+    <div class="nestiee-ingredients-grid">
+      <div class="nestiee-ingredients-item nestiee-reveal" data-delay="1">
+        <h3>印尼直送</h3>
+        <p>來自印尼加里曼丹無污染雨林。金絲燕在最純淨的自然環境中自由築巢，從不假手於來源不明的中間環節。</p>
+      </div>
+      <div class="nestiee-ingredients-item nestiee-reveal" data-delay="2">
+        <h3>零添加</h3>
+        <p>不漂白，不加防腐劑，不用化學配方。你看到的顏色，是燕窩本來的顏色。你嚐到的，是燕窩本來的味道。</p>
+      </div>
+      <div class="nestiee-ingredients-item nestiee-reveal" data-delay="3">
+        <h3>手工清洗</h3>
+        <p>每一個燕窩，由工匠在明亮光影下逐一人手清洗。這個步驟很慢，但我們不想用速度換掉那份純粹。</p>
+      </div>
+      <div class="nestiee-ingredients-item nestiee-reveal" data-delay="4">
+        <h3>SGS 認證</h3>
+        <p>通過 SGS 無添加檢測，香港持牌食物工場製作。每一批，都在你的婚禮前新鮮燉製。</p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ═══ SECTION 07 — TASTING BOX ═══ -->
+<section class="nestiee-section nestiee-tasting" id="nestiee-tasting">
+  <div class="nestiee-tasting-inner">
+    <div class="nestiee-tasting-visual nestiee-reveal">
+      <img
+        src="https://images.unsplash.com/photo-1544787219-0f3aeb0c4c1a?w=1000&q=80"
+        alt="Nestiee 品鑑禮盒俯拍"
+        loading="lazy"
+        width="1000"
+        height="750"
+      >
+    </div>
+    <div class="nestiee-tasting-copy">
+      <h2 class="nestiee-section-title nestiee-reveal">先試味，<br>再決定。</h2>
+      <p class="nestiee-reveal" data-delay="1">
+        我們誠邀你，在家中細味三款口味，親身感受燕窩的純粹質感，以及包裝的細節。<br>
+        讓你在決定之前，已經感受到 Nestiee 的用心。
+      </p>
+      <p class="nestiee-tasting-box-name nestiee-reveal" data-delay="2">
+        The Tasting Box 品鑑禮盒<br>
+        <span style="font-size:0.88rem;font-weight:300;color:var(--nestiee-oat-light);">三款口味各一份，附上品牌卡片。讓你和家人，一起感受最真實的選擇。</span>
+      </p>
+      <div class="nestiee-btn-row nestiee-reveal" data-delay="3">
+        <a href="https://wa.me/REPLACE_WHATSAPP?text=%E9%A0%90%E7%B4%84%E5%93%81%E9%91%91%E7%A6%AE%E7%9B%92" class="nestiee-btn-filled" target="_blank" rel="noopener noreferrer">預約品鑑禮盒</a>
+        <a href="https://wa.me/REPLACE_WHATSAPP" class="nestiee-btn-text" target="_blank" rel="noopener noreferrer">與我們對話（WhatsApp）</a>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ═══ SECTION 08 — FAQ ═══ -->
+<section class="nestiee-section nestiee-faq" id="nestiee-faq">
+  <div class="nestiee-container">
+    <h2 class="nestiee-section-title nestiee-reveal">你可能想知道的事。</h2>
+    <div class="nestiee-faq-list nestiee-reveal" data-delay="1">
+      <div class="nestiee-faq-item">
+        <button class="nestiee-faq-question" aria-expanded="false">
+          <span>幾時要確認訂單比較好？</span>
+          <span class="nestiee-faq-toggle">+</span>
+        </button>
+        <div class="nestiee-faq-answer">
+          <p>建議婚禮前三至六個月聯絡我們鎖定檔期。最終數量可以在婚禮前四星期才確認，讓你有充足時間調整。</p>
+        </div>
+      </div>
+      <div class="nestiee-faq-item">
+        <button class="nestiee-faq-question" aria-expanded="false">
+          <span>燕窩需要雪嗎？保質期有多長？</span>
+          <span class="nestiee-faq-toggle">+</span>
+        </button>
+        <div class="nestiee-faq-answer">
+          <p>Nestiee 燕窩採用原樽密封高溫燉製，常溫保存即可，無需雪櫃。保質期為燉製後六個月，賓客可以帶回家慢慢享用。</p>
+        </div>
+      </div>
+      <div class="nestiee-faq-item">
+        <button class="nestiee-faq-question" aria-expanded="false">
+          <span>可以送去酒店或婚宴場地嗎？</span>
+          <span class="nestiee-faq-toggle">+</span>
+        </button>
+        <div class="nestiee-faq-answer">
+          <p>可以。我們提供直送婚宴場地服務，由專人安排，確保在你的婚禮前夕送達，讓你完全無需操心。</p>
+        </div>
+      </div>
+      <div class="nestiee-faq-item">
+        <button class="nestiee-faq-question" aria-expanded="false">
+          <span>如果我未決定好容量或口味，怎麼辦？</span>
+          <span class="nestiee-faq-toggle">+</span>
+        </button>
+        <div class="nestiee-faq-answer">
+          <p>完全沒問題。你可以先聯絡我們了解方案，或先預約品鑑禮盒試味。我們的顧問會根據你的婚禮規模和賓客組成，為你提供建議。</p>
+        </div>
+      </div>
+      <div class="nestiee-faq-item">
+        <button class="nestiee-faq-question" aria-expanded="false">
+          <span>回禮數量有最低要求嗎？</span>
+          <span class="nestiee-faq-toggle">+</span>
+        </button>
+        <div class="nestiee-faq-answer">
+          <p>回禮訂製服務由 50 份起。如有特別需要，歡迎與我們細談，我們會盡力配合你的安排。</p>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ═══ SECTION 09 — CTA FOOTER ═══ -->
+<section class="nestiee-cta-footer" id="nestiee-cta">
+  <h2 class="nestiee-hero-title nestiee-reveal">開始你的回禮旅程。</h2>
+  <p class="nestiee-hero-subtitle nestiee-reveal" data-delay="1">
+    每一份心意，都值得最真實的成分去承載。<br>我們在這裡，為你打理每一個細節。
+  </p>
+  <div class="nestiee-btn-row nestiee-reveal" data-delay="2">
+    <a href="https://wa.me/REPLACE_WHATSAPP?text=%E9%A0%90%E7%B4%84%E5%93%81%E9%91%91%E7%A6%AE%E7%9B%92" class="nestiee-btn-filled" target="_blank" rel="noopener noreferrer">預約品鑑禮盒</a>
+    <a href="https://wa.me/REPLACE_WHATSAPP" class="nestiee-btn-text" target="_blank" rel="noopener noreferrer">與顧問對話（WhatsApp）</a>
+  </div>
+</section>
+
+</div><!-- /#nestiee-landing -->
+
+<script>
+(function () {
+  'use strict';
+
+  var root = document.getElementById('nestiee-landing');
+  if (!root) return;
+
+  /* ── Scroll reveal ── */
+  var reveals = root.querySelectorAll('.nestiee-reveal');
+  if ('IntersectionObserver' in window) {
+    var revealObs = new IntersectionObserver(function (entries) {
+      entries.forEach(function (entry) {
+        if (entry.isIntersecting) {
+          entry.target.classList.add('nestiee-visible');
+          revealObs.unobserve(entry.target);
+        }
+      });
+    }, { threshold: 0.12, rootMargin: '0px 0px -40px 0px' });
+    reveals.forEach(function (el) { revealObs.observe(el); });
+  } else {
+    reveals.forEach(function (el) { el.classList.add('nestiee-visible'); });
+  }
+
+  /* Hero immediate reveal */
+  var heroReveals = root.querySelectorAll('.nestiee-hero .nestiee-reveal');
+  setTimeout(function () {
+    heroReveals.forEach(function (el) { el.classList.add('nestiee-visible'); });
+  }, 100);
+
+  /* ── Collection tabs ── */
+  var collectionDescs = {
+    '25': '精緻小巧，適合搭配其他婚禮小物，為賓客送上輕巧而真實的心意。',
+    '45': '標準婚宴份量，蘊含約 70% 燕窩精華。恰如其分，展現主人家大方得體的待客之道。',
+    '75': '為小型私密婚禮，或向至親長輩、VIP 賓客表達深厚謝意而設。'
+  };
+
+  var collectionItems = root.querySelectorAll('.nestiee-collection-item');
+  var descEl = document.getElementById('nestiee-collection-desc');
+
+  collectionItems.forEach(function (item) {
+    item.addEventListener('click', function () {
+      var size = item.getAttribute('data-size');
+      collectionItems.forEach(function (i) {
+        i.classList.remove('nestiee-active');
+        i.setAttribute('aria-selected', 'false');
+        i.setAttribute('tabindex', '-1');
+      });
+      item.classList.add('nestiee-active');
+      item.setAttribute('aria-selected', 'true');
+      item.setAttribute('tabindex', '0');
+
+      if (descEl && collectionDescs[size]) {
+        descEl.classList.add('nestiee-fading');
+        setTimeout(function () {
+          descEl.textContent = collectionDescs[size];
+          descEl.classList.remove('nestiee-fading');
+        }, 200);
+      }
+    });
+  });
+
+  /* ── FAQ accordion ── */
+  var faqItems = root.querySelectorAll('.nestiee-faq-item');
+  faqItems.forEach(function (item) {
+    var btn = item.querySelector('.nestiee-faq-question');
+    var toggle = item.querySelector('.nestiee-faq-toggle');
+    btn.addEventListener('click', function () {
+      var isOpen = item.classList.contains('nestiee-open');
+      faqItems.forEach(function (other) {
+        other.classList.remove('nestiee-open');
+        other.querySelector('.nestiee-faq-question').setAttribute('aria-expanded', 'false');
+        other.querySelector('.nestiee-faq-toggle').textContent = '+';
+      });
+      if (!isOpen) {
+        item.classList.add('nestiee-open');
+        btn.setAttribute('aria-expanded', 'true');
+        toggle.textContent = '\u2212';
+      }
+    });
+  });
+
+  /* ── Testimonials carousel ── */
+  var track = document.getElementById('nestiee-testimonials-track');
+  var dotsWrap = document.getElementById('nestiee-testimonials-dots');
+  if (track && dotsWrap) {
+    var cards = track.querySelectorAll('.nestiee-testimonial-card');
+    var dots = dotsWrap.querySelectorAll('button');
+    var current = 0;
+    var total = cards.length;
+    var autoplayTimer = null;
+    var isPaused = false;
+
+    function getOffset(index) {
+      var card = cards[index];
+      if (!card) return 0;
+      var gap = 24;
+      return -(card.offsetWidth + gap) * index;
+    }
+
+    function goTo(index) {
+      current = ((index % total) + total) % total;
+      track.style.transform = 'translateX(' + getOffset(current) + 'px)';
+      dots.forEach(function (dot, i) {
+        dot.classList.toggle('nestiee-dot-active', i === current);
+      });
+    }
+
+    function startAutoplay() {
+      stopAutoplay();
+      if (!isPaused) {
+        autoplayTimer = setInterval(function () {
+          goTo(current + 1);
+        }, 5000);
+      }
+    }
+
+    function stopAutoplay() {
+      if (autoplayTimer) {
+        clearInterval(autoplayTimer);
+        autoplayTimer = null;
+      }
+    }
+
+    dots.forEach(function (dot) {
+      dot.addEventListener('click', function () {
+        goTo(parseInt(dot.getAttribute('data-index'), 10));
+        startAutoplay();
+      });
+    });
+
+    var wrap = root.querySelector('.nestiee-testimonials-wrap');
+    if (wrap) {
+      wrap.addEventListener('mouseenter', function () {
+        isPaused = true;
+        stopAutoplay();
+      });
+      wrap.addEventListener('mouseleave', function () {
+        isPaused = false;
+        startAutoplay();
+      });
+    }
+
+    window.addEventListener('resize', function () { goTo(current); });
+    goTo(0);
+    startAutoplay();
+  }
+
+  /* ── Smooth scroll for in-page anchors ── */
+  root.querySelectorAll('a[href^="#nestiee-"]').forEach(function (link) {
+    link.addEventListener('click', function (e) {
+      var target = document.querySelector(link.getAttribute('href'));
+      if (target) {
+        e.preventDefault();
+        target.scrollIntoView({ behavior: 'smooth', block: 'start' });
+      }
+    });
+  });
+})();
+</script>
