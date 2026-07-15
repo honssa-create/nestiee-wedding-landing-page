@@ -1,0 +1,605 @@
+<!DOCTYPE html>
+<html lang="zh-HK">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Nestiee 燕窩回禮 — 以純粹的心意，致謝最珍重的人</title>
+
+  <!-- Google Fonts: Cormorant Garamond & Noto Serif TC -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,300;0,400;0,500;0,600;1,300;1,400&family=Noto+Serif+TC:wght@300;400;500;600&display=swap" rel="stylesheet">
+
+  <!-- Tailwind CSS CDN -->
+  <script src="https://cdn.tailwindcss.com"></script>
+
+  <script>
+    tailwind.config = {
+      theme: {
+        extend: {
+          colors: {
+            cream: '#FAF7F2',
+            creamDark: '#F3EDE4',
+            oatDeep: '#6B5744',
+            goldAccent: '#C9A96E',
+            charcoalDark: '#3D2B1F',
+          },
+          fontFamily: {
+            serifHeading: ['"Cormorant Garamond"', '"Noto Serif TC"', 'serif'],
+            serifBody: ['"Noto Serif TC"', 'serif'],
+          }
+        }
+      }
+    }
+  </script>
+
+  <style>
+    body {
+      font-family: 'Noto Serif TC', serif;
+      background-color: #FAF7F2;
+      color: #6B5744;
+      -webkit-font-smoothing: antialiased;
+    }
+    .serif-heading {
+      font-family: 'Cormorant Garamond', 'Noto Serif TC', serif;
+    }
+    /* Custom Scrollbar */
+    ::-webkit-scrollbar {
+      width: 4px;
+      height: 4px;
+    }
+    ::-webkit-scrollbar-track {
+      background: #FAF7F2;
+    }
+    ::-webkit-scrollbar-thumb {
+      background: #C9A96E;
+      border-radius: 2px;
+    }
+    /* Smooth Transition */
+    .transition-luxury {
+      transition: all 0.6s cubic-bezier(0.16, 1, 0.3, 1);
+    }
+  </style>
+</head>
+<body class="selection:bg-goldAccent/20 selection:text-charcoalDark">
+
+  <!-- NAVIGATION -->
+  <header class="fixed top-0 left-0 w-full z-50 bg-cream/80 backdrop-blur-md border-b border-goldAccent/10 py-6 px-8 md:px-16 flex justify-between items-center transition-luxury">
+    <div class="serif-heading text-2xl tracking-[0.2em] font-light text-oatDeep">NESTIEE</div>
+    <nav class="hidden md:flex space-x-12 text-xs tracking-[0.15em] font-light">
+      <a href="#promise" class="hover:text-goldAccent transition-colors duration-300">品牌承諾</a>
+      <a href="#flavours" class="hover:text-goldAccent transition-colors duration-300">口味選擇</a>
+      <a href="#collection" class="hover:text-goldAccent transition-colors duration-300">容量方案</a>
+      <a href="#ingredients" class="hover:text-goldAccent transition-colors duration-300">純粹成分</a>
+      <a href="#tasting" class="hover:text-goldAccent transition-colors duration-300">品鑑禮盒</a>
+    </nav>
+    <div>
+      <a href="#tasting" class="text-xs tracking-widest border border-oatDeep/40 hover:border-goldAccent px-6 py-2.5 transition-luxury hover:text-goldAccent">
+        預約品鑑
+      </a>
+    </div>
+  </header>
+
+  <!-- SECTION 01: HERO -->
+  <section class="min-h-screen flex flex-col md:flex-row items-center pt-24 md:pt-0">
+    <div class="w-full md:w-[55%] px-8 md:px-20 lg:px-32 py-16 md:py-0 flex flex-col justify-center">
+      <h1 class="serif-heading text-4xl md:text-5xl lg:text-6xl font-light leading-snug tracking-wider text-oatDeep mb-8">
+        以純粹的心意，<br>
+        <span class="italic font-light">致謝最珍重的人。</span>
+      </h1>
+      <p class="text-sm md:text-base font-light leading-relaxed text-oatDeep/80 mb-12 max-w-md">
+        Nestiee 無添加燕窩回禮。<br>
+        讓每一份謝意，都配得上你這一天的用心。
+      </p>
+      <div class="flex flex-row space-x-8 items-center">
+        <a href="#collection" class="text-xs tracking-widest border-b border-oatDeep hover:border-goldAccent pb-2 transition-luxury hover:text-goldAccent">
+          了解回禮方案
+        </a>
+        <a href="#flavours" class="text-xs tracking-widest text-oatDeep/60 hover:text-goldAccent pb-2 transition-luxury">
+          探索口味與份量
+        </a>
+      </div>
+    </div>
+    <div class="w-full md:w-[45%] h-[50vh] md:h-screen relative overflow-hidden bg-[#EBE4DA]">
+      <img
+        src="https://nestiee.com.hk/wp-content/uploads/2025/11/N.jpg"
+        alt="Nestiee 燕窩回禮主視覺"
+        class="w-full h-full object-cover object-center"
+        loading="eager"
+      >
+    </div>
+  </section>
+
+  <hr class="border-t border-goldAccent/10 mx-8 md:mx-16">
+
+  <!-- SECTION 02: THE PROMISE -->
+  <section id="promise" class="py-24 md:py-32 bg-creamDark/40 px-8 md:px-16 lg:px-32">
+    <div class="max-w-4xl mx-auto text-center mb-20">
+      <h2 class="serif-heading text-3xl md:text-4xl font-light tracking-wide text-oatDeep mb-6">
+        不止是燕窩。<br>是一份無需掛心的回禮方案。
+      </h2>
+      <p class="text-sm font-light leading-relaxed text-oatDeep/70">
+        你已經為這一天籌備了太多。回禮這件事，交給我們。
+      </p>
+    </div>
+
+    <div class="grid grid-cols-1 md:grid-cols-3 gap-12 lg:gap-16 max-w-6xl mx-auto">
+      <!-- Card 1 -->
+      <div class="flex flex-col items-center text-center px-4 md:border-r border-goldAccent/20 last:border-0">
+        <div class="w-12 h-12 mb-8 flex items-center justify-center">
+          <svg class="w-10 h-10 text-goldAccent/60" fill="none" stroke="currentColor" stroke-width="0.75" viewBox="0 0 24 24">
+            <path stroke-linecap="round" stroke-linejoin="round" d="M16.862 4.487l1.687-1.688a1.875 1.875 0 112.652 2.652L10.582 16.07a4.5 4.5 0 01-1.897 1.13L6 18l.8-2.685a4.5 4.5 0 011.13-1.897l8.932-8.931zm0 0L19.5 7.125M18 14v4.75A2.25 2.25 0 0115.75 21H5.25A2.25 2.25 0 013 18.75V8.25A2.25 2.25 0 015.25 6H10" />
+          </svg>
+        </div>
+        <h3 class="text-base font-medium text-oatDeep mb-4 tracking-wider">專屬設計</h3>
+        <p class="text-xs font-light leading-relaxed text-oatDeep/85">
+          只需提供你們的名字與婚期，我們為你製作專屬 Logo Card。每一份回禮，都成為你們故事的一部分。
+        </p>
+      </div>
+      <!-- Card 2 -->
+      <div class="flex flex-col items-center text-center px-4 md:border-r border-goldAccent/20 last:border-0">
+        <div class="w-12 h-12 mb-8 flex items-center justify-center">
+          <svg class="w-10 h-10 text-goldAccent/60" fill="none" stroke="currentColor" stroke-width="0.75" viewBox="0 0 24 24">
+            <path stroke-linecap="round" stroke-linejoin="round" d="M6.75 3v2.25M17.25 3v2.25M3 18.75V7.5a2.25 2.25 0 012.25-2.25h13.5A2.25 2.25 0 0121 7.5v11.25m-18 0A2.25 2.25 0 005.25 21h13.5A2.25 2.25 0 0021 18.75m-18 0v-7.5A2.25 2.25 0 015.25 9h13.5A2.25 2.25 0 0121 11.25v7.5m-9-6h.008v.008H12v-.008zM12 15h.008v.008H12V15zm0 2.25h.008v.008H12v-.008zM9.75 15h.008v.008H9.75V15zm0 2.25h.008v.008H9.75v-.008zM7.5 15h.008v.008H7.5V15zm0 2.25h.008v.008H7.5v-.008zm6.75-4.5h.008v.008h-.008v-.008zm0 2.25h.008v.008h-.008V15zm0 2.25h.008v.008h-.008v-.008zm2.25-4.5h.008v.008H16.5v-.008zm0 2.25h.008v.008H16.5V15z" />
+          </svg>
+        </div>
+        <h3 class="text-base font-medium text-oatDeep mb-4 tracking-wider">靈活預訂</h3>
+        <p class="text-xs font-light leading-relaxed text-oatDeep/85">
+          先鎖定檔期，婚禮前四星期才確認最終數量。讓你在籌備過程中，保有最大的從容。
+        </p>
+      </div>
+      <!-- Card 3 -->
+      <div class="flex flex-col items-center text-center px-4">
+        <div class="w-12 h-12 mb-8 flex items-center justify-center">
+          <svg class="w-10 h-10 text-goldAccent/60" fill="none" stroke="currentColor" stroke-width="0.75" viewBox="0 0 24 24">
+            <path stroke-linecap="round" stroke-linejoin="round" d="M8.25 18.75a1.5 1.5 0 01-3 0m3 0a1.5 1.5 0 00-3 0m3 0h6m-9 0H3.375a1.125 1.125 0 01-1.125-1.125V14.25m17.25 4.5a1.5 1.5 0 01-3 0m3 0a1.5 1.5 0 00-3 0m3 0h1.125c.621 0 1.129-.504 1.09-1.124l-.318-5.085a1.125 1.125 0 00-1.124-1.054h-2.24c-.58 0-1.101-.391-1.21-1.071l-.108-.707A1.125 1.125 0 0015.342 5.25H8.533a2.25 2.25 0 00-2.185 1.733l-.133.528c-.105.419-.44.757-.864.846L3.92 8.533a2.25 2.25 0 00-1.733 2.185V14.25m15 0a1.5 1.5 0 11-3 0m3 0h-9" />
+          </svg>
+        </div>
+        <h3 class="text-base font-medium text-oatDeep mb-4 tracking-wider">直送場地</h3>
+        <p class="text-xs font-light leading-relaxed text-oatDeep/85">
+          婚禮前夕在香港持牌工場新鮮燉製，由專人直送婚宴場地。賓客當晚即可品嚐，無需雪櫃保存。
+        </p>
+      </div>
+    </div>
+  </section>
+
+  <!-- SECTION 03: THE FLAVOURS -->
+  <section id="flavours" class="py-24 md:py-32 px-8 md:px-16 lg:px-32">
+    <div class="max-w-4xl mx-auto text-center mb-20">
+      <h2 class="serif-heading text-3xl md:text-4xl font-light tracking-wide text-oatDeep mb-6">
+        三款口味，<br>為不同的她，送上最適合的心意。
+      </h2>
+      <p class="text-sm font-light leading-relaxed text-oatDeep/70">
+        我們堅持零添加，只為保留燕窩最純粹的本質。每一款配搭，都經過細心挑選。
+      </p>
+    </div>
+
+    <div class="grid grid-cols-1 md:grid-cols-3 gap-8 max-w-6xl mx-auto">
+
+      <!-- Card 1: 黃金桂花 -->
+      <div class="group bg-creamDark/20 border border-goldAccent/10 overflow-hidden transition-luxury hover:-translate-y-1">
+        <div class="h-64 relative overflow-hidden">
+          <img
+            src="https://nestiee.com.hk/wp-content/uploads/2026/07/Untitled-design-20.jpg"
+            alt="黃金桂花燕窩"
+            class="w-full h-full object-cover object-center group-hover:scale-105 transition-luxury"
+            loading="lazy"
+          >
+          <div class="absolute top-4 left-4 text-[10px] tracking-widest text-goldAccent border border-goldAccent/40 px-2.5 py-1 bg-cream/90">
+            年輕賓客之選
+          </div>
+        </div>
+        <div class="p-8">
+          <h3 class="serif-heading text-xl font-light text-oatDeep mb-3">黃金桂花</h3>
+          <p class="text-xs font-light leading-relaxed text-oatDeep/80">
+            淡雅的桂花香，在唇齒間徐徐綻放。微甜回甘，是閨蜜與姊妹們最鍾愛的一款。
+          </p>
+        </div>
+      </div>
+
+      <!-- Card 2: 暖心紅棗 -->
+      <div class="group bg-creamDark/20 border border-goldAccent/10 overflow-hidden transition-luxury hover:-translate-y-1">
+        <div class="h-64 relative overflow-hidden">
+          <img
+            src="https://nestiee.com.hk/wp-content/uploads/2026/07/Untitled-design-21.jpg"
+            alt="暖心紅棗燕窩"
+            class="w-full h-full object-cover object-center group-hover:scale-105 transition-luxury"
+            loading="lazy"
+          >
+          <div class="absolute top-4 left-4 text-[10px] tracking-widest text-goldAccent border border-goldAccent/40 px-2.5 py-1 bg-cream/90">
+            長輩至愛
+          </div>
+        </div>
+        <div class="p-8">
+          <h3 class="serif-heading text-xl font-light text-oatDeep mb-3">暖心紅棗</h3>
+          <p class="text-xs font-light leading-relaxed text-oatDeep/80">
+            棗香溫潤，精選紅棗切片入饌。承載著甜蜜蜜的傳統心意，向長輩表達最深的敬意。
+          </p>
+        </div>
+      </div>
+
+      <!-- Card 3: 經典冰糖 -->
+      <div class="group bg-creamDark/20 border border-goldAccent/10 overflow-hidden transition-luxury hover:-translate-y-1">
+        <div class="h-64 relative overflow-hidden">
+          <img
+            src="https://nestiee.com.hk/wp-content/uploads/2026/07/Untitled-design-22.jpg"
+            alt="經典冰糖燕窩"
+            class="w-full h-full object-cover object-center group-hover:scale-105 transition-luxury"
+            loading="lazy"
+          >
+          <div class="absolute top-4 left-4 text-[10px] tracking-widest text-goldAccent border border-goldAccent/40 px-2.5 py-1 bg-cream/90">
+            家人最愛
+          </div>
+        </div>
+        <div class="p-8">
+          <h3 class="serif-heading text-xl font-light text-oatDeep mb-3">經典冰糖</h3>
+          <p class="text-xs font-light leading-relaxed text-oatDeep/80">
+            清甜不膩，絲滑入喉。最能品嚐出頂級金絲燕窩的晶瑩質感，男女老幼皆宜。
+          </p>
+        </div>
+      </div>
+
+    </div>
+  </section>
+
+  <!-- SECTION 04: THE COLLECTION -->
+  <section id="collection" class="py-24 md:py-32 bg-creamDark/30 px-8 md:px-16 lg:px-32">
+    <div class="max-w-4xl mx-auto text-center mb-20">
+      <h2 class="serif-heading text-3xl md:text-4xl font-light tracking-wide text-oatDeep mb-6">
+        為你的婚宴，<br>挑選最合適的份量。
+      </h2>
+      <p class="text-sm font-light leading-relaxed text-oatDeep/70">
+        無論是私密的小型婚禮，還是盛大的百人晚宴，每一份心意，都有最恰當的尺度。
+      </p>
+    </div>
+
+    <div class="max-w-5xl mx-auto">
+      <div class="grid grid-cols-1 md:grid-cols-3 gap-8 items-stretch mb-12">
+
+        <button onclick="switchSize('petite')" id="btn-petite" class="size-card text-left p-8 border border-goldAccent/10 bg-cream/50 transition-luxury hover:border-goldAccent focus:outline-none flex flex-col justify-between">
+          <div>
+            <span class="text-[10px] tracking-widest text-goldAccent uppercase block mb-1">The Petite</span>
+            <h3 class="serif-heading text-2xl font-light text-oatDeep mb-4">25g 輕盈之選</h3>
+            <p class="text-xs font-light leading-relaxed text-oatDeep/80 mb-8">
+              精緻小巧，適合搭配其他婚禮小物，為賓客送上輕巧而真實的心意。
+            </p>
+          </div>
+          <span class="text-xs tracking-widest text-oatDeep/60 border-b border-oatDeep/20 pb-1 self-start">查看細節</span>
+        </button>
+
+        <button onclick="switchSize('classic')" id="btn-classic" class="size-card text-left p-8 border-2 border-goldAccent bg-cream transition-luxury focus:outline-none flex flex-col justify-between relative ring-4 ring-goldAccent/5">
+          <div class="absolute -top-3 right-6 bg-goldAccent text-cream text-[9px] tracking-widest px-3 py-1 font-light uppercase">
+            Most Chosen
+          </div>
+          <div>
+            <span class="text-[10px] tracking-widest text-goldAccent uppercase block mb-1">The Classic</span>
+            <h3 class="serif-heading text-2xl font-light text-oatDeep mb-4">45g 經典之選</h3>
+            <p class="text-xs font-light leading-relaxed text-oatDeep/80 mb-8">
+              標準婚宴份量，蘊含約 70% 燕窩精華。恰如其分，展現主人家大方得體的待客之道。
+            </p>
+          </div>
+          <span class="text-xs tracking-widest text-goldAccent border-b border-goldAccent/40 pb-1 self-start">查看細節</span>
+        </button>
+
+        <button onclick="switchSize('prestige')" id="btn-prestige" class="size-card text-left p-8 border border-goldAccent/10 bg-cream/50 transition-luxury hover:border-goldAccent focus:outline-none flex flex-col justify-between">
+          <div>
+            <span class="text-[10px] tracking-widest text-goldAccent uppercase block mb-1">The Prestige</span>
+            <h3 class="serif-heading text-2xl font-light text-oatDeep mb-4">75g 尊選之選</h3>
+            <p class="text-xs font-light leading-relaxed text-oatDeep/80 mb-8">
+              為小型私密婚禮，或向至親長輩、VIP 賓客表達大氣而深厚的謝意。
+            </p>
+          </div>
+          <span class="text-xs tracking-widest text-oatDeep/60 border-b border-oatDeep/20 pb-1 self-start">查看細節</span>
+        </button>
+
+      </div>
+
+      <div id="size-details" class="bg-cream p-8 border border-goldAccent/10 text-center max-w-3xl mx-auto">
+        <p id="size-desc" class="text-xs md:text-sm font-light leading-relaxed text-oatDeep/80 italic">
+          「45g 經典之選」是最多新人挑選的規格，瓶身線條修長大氣，附贈精美絲帶與客製心意卡。
+        </p>
+      </div>
+
+      <div class="text-center mt-12">
+        <p class="text-[11px] tracking-widest text-oatDeep/60">
+          回禮訂製服務由 50 份起。回禮數量與方案，歡迎與我們細談。
+        </p>
+      </div>
+    </div>
+  </section>
+
+  <!-- SECTION 05: THE MOMENTS (TESTIMONIALS) -->
+  <section class="py-24 md:py-32 px-8 md:px-16 lg:px-32">
+    <div class="max-w-6xl mx-auto flex flex-col md:flex-row items-center gap-16">
+      <div class="w-full md:w-1/2">
+        <span class="text-xs tracking-[0.2em] text-goldAccent uppercase block mb-3">The Moments</span>
+        <h2 class="serif-heading text-3xl md:text-4xl font-light tracking-wide text-oatDeep mb-8">
+          每一場婚禮，<br>都是獨一無二的故事。
+        </h2>
+
+        <div class="min-h-[180px] flex flex-col justify-between">
+          <p id="testimony-text" class="serif-heading italic text-lg leading-relaxed text-oatDeep/90 transition-luxury">
+            "那是一份令人驚喜的細膩。賓客在餐桌上發現這份可以即席品嚐的燕窩，那種被珍視的感覺，正是我們想傳遞的。"
+          </p>
+          <p id="testimony-author" class="text-xs tracking-widest text-oatDeep/60 mt-6 uppercase">
+            — K. & J., The Peninsula Hong Kong
+          </p>
+        </div>
+
+        <div class="flex space-x-4 mt-8">
+          <button onclick="prevTestimonial()" class="w-8 h-8 rounded-full border border-oatDeep/20 hover:border-goldAccent flex items-center justify-center transition-colors">
+            <span class="text-xs font-light">←</span>
+          </button>
+          <button onclick="nextTestimonial()" class="w-8 h-8 rounded-full border border-oatDeep/20 hover:border-goldAccent flex items-center justify-center transition-colors">
+            <span class="text-xs font-light">→</span>
+          </button>
+        </div>
+      </div>
+
+      <div class="w-full md:w-1/2 h-[450px] relative overflow-hidden">
+        <img
+          src="https://nestiee.com.hk/wp-content/uploads/2026/05/3-2-edited.png"
+          alt="婚禮現場賓客品嚐 Nestiee 燕窩回禮"
+          class="w-full h-full object-cover object-center"
+          style="filter: saturate(0.35) contrast(0.95);"
+          loading="lazy"
+        >
+      </div>
+    </div>
+  </section>
+
+  <!-- SECTION 06: INGREDIENTS FIRST -->
+  <section id="ingredients" class="py-24 md:py-32 bg-charcoalDark text-cream px-8 md:px-16 lg:px-32">
+    <div class="max-w-4xl mx-auto text-center mb-24">
+      <h2 class="serif-heading text-3xl md:text-5xl font-light tracking-widest text-cream mb-8">
+        成分表上，<br>只有燕窩本身。
+      </h2>
+      <p class="text-sm font-light leading-relaxed text-cream/70 max-w-xl mx-auto">
+        我們相信，你的心意值得最真實的成分去承載。<br>這不是一個行銷承諾，是我們三十年家族的標準。
+      </p>
+    </div>
+
+    <div class="grid grid-cols-1 md:grid-cols-2 gap-x-16 gap-y-12 max-w-5xl mx-auto">
+
+      <div class="border-t border-goldAccent/20 pt-6">
+        <h3 class="serif-heading text-lg font-light text-goldAccent mb-3">印尼直送</h3>
+        <p class="text-xs font-light leading-relaxed text-cream/80">
+          來自印尼加里曼丹無污染雨林。金絲燕在最純淨的自然環境中自由築巢，從不假手於來源不明的中間環節。
+        </p>
+      </div>
+
+      <div class="border-t border-goldAccent/20 pt-6">
+        <h3 class="serif-heading text-lg font-light text-goldAccent mb-3">零添加</h3>
+        <p class="text-xs font-light leading-relaxed text-cream/80">
+          不漂白，不加防腐劑，不用化學配方。你看到的顏色，是燕窩本來的顏色。你嚐到的，是燕窩本來的味道。
+        </p>
+      </div>
+
+      <div class="border-t border-goldAccent/20 pt-6">
+        <h3 class="serif-heading text-lg font-light text-goldAccent mb-3">手工清洗</h3>
+        <p class="text-xs font-light leading-relaxed text-cream/80">
+          每一個燕窩，由工匠在明亮光影下逐一人手清洗。這個步驟很慢，但我們不想用速度換掉那份純粹。
+        </p>
+      </div>
+
+      <div class="border-t border-goldAccent/20 pt-6">
+        <h3 class="serif-heading text-lg font-light text-goldAccent mb-3">SGS 認證</h3>
+        <p class="text-xs font-light leading-relaxed text-cream/80">
+          通過 SGS 無添加檢測，香港持牌食物工場製作。每一批，都在你的婚禮前新鮮燉製。
+        </p>
+      </div>
+
+    </div>
+  </section>
+
+  <!-- SECTION 07: THE TASTING BOX -->
+  <section id="tasting" class="py-24 md:py-32 px-8 md:px-16 lg:px-32">
+    <div class="max-w-6xl mx-auto flex flex-col md:flex-row items-center gap-16">
+
+      <div class="w-full md:w-1/2 h-[400px] relative overflow-hidden order-2 md:order-1">
+        <img
+          src="https://nestiee.com.hk/wp-content/uploads/2025/06/%E5%A9%9A%E7%A6%AE%E5%9B%9E%E7%A6%AE%E4%B9%8B%E9%81%B8.png"
+          alt="Nestiee 品鑑禮盒"
+          class="w-full h-full object-cover object-center"
+          loading="lazy"
+        >
+      </div>
+
+      <div class="w-full md:w-1/2 order-1 md:order-2">
+        <span class="text-xs tracking-[0.2em] text-goldAccent uppercase block mb-3">The Tasting Box</span>
+        <h2 class="serif-heading text-3xl md:text-4xl font-light tracking-wide text-oatDeep mb-6">
+          先試味，<br>再決定。
+        </h2>
+        <p class="text-xs md:text-sm font-light leading-relaxed text-oatDeep/85 mb-8">
+          我們誠邀你，在家中細味三款口味，親身感受燕窩的純粹質感，以及包裝的細節。讓你在決定之前，已經感受到 Nestiee 的用心。
+        </p>
+        <p class="text-xs font-semibold text-oatDeep tracking-wider mb-8">
+          三款口味各一份，附上品牌設計卡片。
+        </p>
+
+        <div class="flex flex-col sm:flex-row gap-6">
+          <a href="#" class="inline-block text-center text-xs tracking-widest bg-oatDeep hover:bg-charcoalDark text-cream px-8 py-4 transition-luxury font-light">
+            預約品鑑禮盒
+          </a>
+          <a href="#" class="inline-block text-center text-xs tracking-widest border border-oatDeep/40 hover:border-goldAccent text-oatDeep hover:text-goldAccent px-8 py-4 transition-luxury font-light">
+            與我們對話（WhatsApp）
+          </a>
+        </div>
+      </div>
+
+    </div>
+  </section>
+
+  <!-- SECTION 08: FAQ -->
+  <section class="py-24 md:py-32 bg-creamDark/20 px-8 md:px-16 lg:px-32">
+    <div class="max-w-2xl mx-auto">
+      <h2 class="serif-heading text-3xl font-light tracking-wide text-oatDeep text-center mb-16">
+        你可能想知道的事。
+      </h2>
+
+      <div class="space-y-6">
+
+        <div class="border-b border-goldAccent/20 pb-4">
+          <button onclick="toggleFAQ(1)" class="w-full flex justify-between items-center text-left py-2 text-oatDeep hover:text-goldAccent transition-colors duration-300 focus:outline-none">
+            <span class="text-sm font-medium tracking-wide">幾時要確認訂單比較好？</span>
+            <span id="faq-icon-1" class="text-lg font-light">+</span>
+          </button>
+          <div id="faq-ans-1" class="hidden mt-4 text-xs font-light leading-relaxed text-oatDeep/70 max-w-xl transition-luxury">
+            建議婚禮前三至六個月聯絡我們鎖定檔期。最終數量可以在婚禮前四星期才確認，讓你有充足時間調整。
+          </div>
+        </div>
+
+        <div class="border-b border-goldAccent/20 pb-4">
+          <button onclick="toggleFAQ(2)" class="w-full flex justify-between items-center text-left py-2 text-oatDeep hover:text-goldAccent transition-colors duration-300 focus:outline-none">
+            <span class="text-sm font-medium tracking-wide">燕窩需要雪嗎？保質期有多長？</span>
+            <span id="faq-icon-2" class="text-lg font-light">+</span>
+          </button>
+          <div id="faq-ans-2" class="hidden mt-4 text-xs font-light leading-relaxed text-oatDeep/70 max-w-xl transition-luxury">
+            Nestiee 燕窩採用原樽密封高溫燉製，常溫保存即可，無需雪櫃。保質期為燉製後六個月，賓客可以帶回家慢慢享用。
+          </div>
+        </div>
+
+        <div class="border-b border-goldAccent/20 pb-4">
+          <button onclick="toggleFAQ(3)" class="w-full flex justify-between items-center text-left py-2 text-oatDeep hover:text-goldAccent transition-colors duration-300 focus:outline-none">
+            <span class="text-sm font-medium tracking-wide">可以送去酒店或婚宴場地嗎？</span>
+            <span id="faq-icon-3" class="text-lg font-light">+</span>
+          </button>
+          <div id="faq-ans-3" class="hidden mt-4 text-xs font-light leading-relaxed text-oatDeep/70 max-w-xl transition-luxury">
+            可以。我們提供直送婚宴場地服務，由專人安排，確保在你的婚禮前夕送達，讓你完全無需操心。
+          </div>
+        </div>
+
+        <div class="border-b border-goldAccent/20 pb-4">
+          <button onclick="toggleFAQ(4)" class="w-full flex justify-between items-center text-left py-2 text-oatDeep hover:text-goldAccent transition-colors duration-300 focus:outline-none">
+            <span class="text-sm font-medium tracking-wide">如果我未決定好容量或口味，怎麼辦？</span>
+            <span id="faq-icon-4" class="text-lg font-light">+</span>
+          </button>
+          <div id="faq-ans-4" class="hidden mt-4 text-xs font-light leading-relaxed text-oatDeep/70 max-w-xl transition-luxury">
+            完全沒問題。你可以先聯絡我們了解方案，或先預約品鑑禮盒試味。我們的顧問會根據你的婚禮規模和賓客組成，為你提供建議。
+          </div>
+        </div>
+
+        <div class="border-b border-goldAccent/20 pb-4">
+          <button onclick="toggleFAQ(5)" class="w-full flex justify-between items-center text-left py-2 text-oatDeep hover:text-goldAccent transition-colors duration-300 focus:outline-none">
+            <span class="text-sm font-medium tracking-wide">回禮數量有最低要求嗎？</span>
+            <span id="faq-icon-5" class="text-lg font-light">+</span>
+          </button>
+          <div id="faq-ans-5" class="hidden mt-4 text-xs font-light leading-relaxed text-oatDeep/70 max-w-xl transition-luxury">
+            回禮訂製服務由 50 份起。如有特別需要，歡迎與我們細談，我們會盡力配合你的安排。
+          </div>
+        </div>
+
+      </div>
+    </div>
+  </section>
+
+  <!-- SECTION 09: CTA FOOTER -->
+  <footer class="py-32 bg-cream text-center px-8">
+    <div class="max-w-2xl mx-auto">
+      <h2 class="serif-heading text-3xl md:text-4xl font-light tracking-widest text-oatDeep mb-6">
+        開始你的回禮旅程。
+      </h2>
+      <p class="text-xs md:text-sm font-light leading-relaxed text-oatDeep/70 mb-12 max-w-md mx-auto">
+        每一份心意，都值得最真實的成分去承載。我們在這裡，為你打理每一個細節。
+      </p>
+
+      <div class="flex flex-col sm:flex-row justify-center items-center gap-6">
+        <a href="#" class="w-full sm:w-auto text-xs tracking-widest bg-oatDeep hover:bg-charcoalDark text-cream px-10 py-4 transition-luxury font-light">
+          預約品鑑禮盒
+        </a>
+        <a href="#" class="w-full sm:w-auto text-xs tracking-widest border border-oatDeep/40 hover:border-goldAccent text-oatDeep hover:text-goldAccent px-10 py-4 transition-luxury font-light">
+          與顧問對話（WhatsApp）
+        </a>
+      </div>
+
+      <div class="mt-24 border-t border-goldAccent/10 pt-8 flex flex-col md:flex-row justify-between items-center text-[10px] tracking-widest text-oatDeep/50">
+        <div>© 2026 NESTIEE. ALL RIGHTS RESERVED.</div>
+        <div class="mt-4 md:mt-0 flex space-x-6">
+          <a href="#" class="hover:text-goldAccent transition-colors">PRIVACY POLICY</a>
+          <a href="#" class="hover:text-goldAccent transition-colors">TERMS OF SERVICE</a>
+        </div>
+      </div>
+    </div>
+  </footer>
+
+  <!-- SIMPLE INTERACTION JAVASCRIPT -->
+  <script>
+    // Section 04: Size switcher
+    const sizes = {
+      petite: "「25g 輕盈之選」精緻小巧，非常適合作為配合其他精緻禮品（例如香薰蠟燭、手寫卡片）的雙重驚喜組合。",
+      classic: "「45g 經典之選」是最多新人挑選的規格，瓶身線條修長大氣，附贈精美絲帶與客製心意卡。",
+      prestige: "「75g 尊選之選」容量豐沛，最適合向長輩、VIP賓客或在精緻的小型私密婚宴中，展現無比大氣的最高謝意。"
+    };
+
+    function switchSize(sizeKey) {
+      document.querySelectorAll('.size-card').forEach(card => {
+        card.classList.remove('border-2', 'border-goldAccent', 'bg-cream', 'ring-4', 'ring-goldAccent/5');
+        card.classList.add('border-goldAccent/10', 'bg-cream/50');
+      });
+
+      const activeCard = document.getElementById(`btn-${sizeKey}`);
+      activeCard.classList.remove('border-goldAccent/10', 'bg-cream/50');
+      activeCard.classList.add('border-2', 'border-goldAccent', 'bg-cream', 'ring-4', 'ring-goldAccent/5');
+
+      const descEl = document.getElementById('size-desc');
+      descEl.style.opacity = 0;
+      setTimeout(() => {
+        descEl.innerText = sizes[sizeKey];
+        descEl.style.opacity = 1;
+      }, 150);
+    }
+
+    // Section 05: Testimony Slider
+    const testimonials = [
+      {
+        text: '"那是一份令人驚喜的細膩。賓客在餐桌上發現這份可以即席品嚐的燕窩，那種被珍視的感覺，正是我們想傳遞的。"',
+        author: "— K. & J., The Peninsula Hong Kong"
+      },
+      {
+        text: '"從包裝設計的溝通，到最後送到婚禮現場，Nestiee 讓我能完全放下心頭大石，專注享受屬於我的日子。"',
+        author: "— C. & T., Repulse Bay"
+      }
+    ];
+    let currentTestimony = 0;
+
+    function updateTestimonial() {
+      const textEl = document.getElementById('testimony-text');
+      const authorEl = document.getElementById('testimony-author');
+
+      textEl.style.opacity = 0;
+      authorEl.style.opacity = 0;
+
+      setTimeout(() => {
+        textEl.innerText = testimonials[currentTestimony].text;
+        authorEl.innerText = testimonials[currentTestimony].author;
+        textEl.style.opacity = 1;
+        authorEl.style.opacity = 1;
+      }, 200);
+    }
+
+    function nextTestimonial() {
+      currentTestimony = (currentTestimony + 1) % testimonials.length;
+      updateTestimonial();
+    }
+
+    function prevTestimonial() {
+      currentTestimony = (currentTestimony - 1 + testimonials.length) % testimonials.length;
+      updateTestimonial();
+    }
+
+    // Section 08: FAQ Accordion
+    function toggleFAQ(id) {
+      const ans = document.getElementById(`faq-ans-${id}`);
+      const icon = document.getElementById(`faq-icon-${id}`);
+
+      if (ans.classList.contains('hidden')) {
+        ans.classList.remove('hidden');
+        icon.innerText = '−';
+      } else {
+        ans.classList.add('hidden');
+        icon.innerText = '+';
+      }
+    }
+  </script>
+</body>
+</html>
